@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>
+        Book Store
+    </title>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
+</h:head>
+<h:body>
+    <ui:include src="header.xhtml"/>
+    <p:tabMenu activeIndex="#{param.i}">
+        <p:menuitem value="Overview" outcome="index" icon="pi pi-star">
+            <f:param name="i" value="0" />
+        </p:menuitem>
+        <p:menuitem value="Catalog" outcome="catalog" icon="pi pi-search">
+            <f:param name="i" value="1" />
+        </p:menuitem>
+    </p:tabMenu>
+    <h:form id="form1">
+        <h2>Find book to read here!</h2>
+        <div id="searchInput">
+            <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}"/>
+            <p:commandButton value="Search" id="searchBtn" update=":form2:dataView" action="#{dataGridView.findBooksByCriteria}" style="margin-right:20px;" styleClass="ui-priority-primary" />
+        </div>
+    </h:form>
+    <h:form id="form2">
+        <div id="searchOutput">
+            <p:dataView id="dataView" var="book" value="#{dataGridView.books}"
+                        rows="10" paginator="true"
+                        paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                        currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                        rowsPerPageTemplate="10, 20, 30"
+                        paginatorPosition="bottom"
+                        gridIcon="pi pi-th-large" listIcon="pi pi-bars">
+
+                <p:dataViewGridItem >
+                    <p:panel header="" style="text-align:center">
+                        <h:panelGrid columns="1" style="width:100%">
+                            <p:graphicImage class="viewIconGrid" library="images" name="bookIcon.png"/>
+
+                            <h:outputText value="#{book.title}" />
+
+                            <p:commandLink update="@widgetVar(bookDialog)" oncomplete="PF('bookDialog').show()" title="View Detail">
+                                <h:outputText styleClass="ui-icon pi pi-search" style="margin:0 auto;" />
+                                <f:setPropertyActionListener value="#{book}" target="#{dataGridView.selectedBook}" />
+                            </p:commandLink>
+                        </h:panelGrid>
+                    </p:panel>
+                    <hr/>
+                </p:dataViewGridItem>
+
+                <p:dataViewListItem>
+                    <h:panelGrid columns="3" style="width:100%" columnClasses="logo,detail">
+                        <p:graphicImage class="viewIconList" library="images" name="bookIcon.png"/>
+
+                        <p:outputPanel>
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h:outputText value="Title:" />
+                                <h:outputText value="#{book.title}" style="font-weight: bold"/>
+
+                                <h:outputText value="Authors:" />
+                                <p:repeat value="#{book.authors}" var="author">
+                                    <h:outputText value="#{author.firstName += ' '}" rendered="#{author.firstName != null}" style="font-weight: bold"/>
+                                    <h:outputText value="#{author.middleName += ' '}" rendered="#{author.middleName != null}" style="font-weight: bold"/>
+                                    <h:outputText value="#{author.lastName += ' '}" rendered="#{author.lastName != null}" style="font-weight: bold"/>
+                                    <br/>
+                                </p:repeat>
+
+                                <h:outputText value="Rating:" />
+                                <p:rating value="#{book.rating.intValue()}" readonly="true"/>
+
+                                <h:outputText value="Price:" />
+                                <h:outputText value="#{book.price += '$'} " style="font-weight: bold"/>
+                            </h:panelGrid>
+                        </p:outputPanel>
+
+                        <p:commandButton update="@widgetVar(bookDialog)" oncomplete="PF('bookDialog').show()" title="View Detail">
+                            <!--<h:outputText styleClass="ui-icon pi pi-search" style="margin:0 auto;" />-->
+                            <f:setPropertyActionListener value="#{book}" target="#{dataGridView.selectedBook}" />
+                        </p:commandButton>
+                    </h:panelGrid>
+                    <hr/>
+                </p:dataViewListItem>
+            </p:dataView>
+
+            <p:dialog header="Book Info" widgetVar="bookDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+                <p:outputPanel id="bookDetail" style="text-align:center;">
+                    <p:panelGrid  columns="2" rendered="#{not empty dataGridView.selectedBook}" columnClasses="label,value">
+                        <f:facet name="header">
+                            <p:graphicImage class="detailIcon" library="images" name="bookIcon.png"/>
+                        </f:facet>
+
+                        <h:outputText value="Title:" />
+                        <h:outputText value="#{dataGridView.selectedBook.title}" style="font-weight: bold"/>
+
+                        <h:outputText value="Authors:" />
+                        <p:repeat value="#{dataGridView.selectedBook.authors}" var="author">
+                            <h:outputText value="#{author.firstName += ' '}" rendered="#{author.firstName != null}" style="font-weight: bold"/>
+                            <h:outputText value="#{author.middleName += ' '}" rendered="#{author.middleName != null}" style="font-weight: bold"/>
+                            <h:outputText value="#{author.lastName += ' '}" rendered="#{author.lastName != null}" style="font-weight: bold"/>
+                            <br/>
+                        </p:repeat>
+
+                        <h:outputText value="Categories:"/>
+                        <p:repeat value="#{dataGridView.selectedBook.genres}" var="genre" varStatus="status">
+                            <h:outputText value="#{genre.genreName}#{status.last ? '' : ', '}" rendered="#{genre.genreName != null}" style="font-weight: bold"/>
+                        </p:repeat>
+
+                        <h:outputText value="Publisher:"/>
+                        <h:outputText value="#{dataGridView.selectedBook.publisher.name}"/>
+
+                        <h:outputText value="Published date:" />
+                        <h:outputText value="#{dataGridView.selectedBook.publishedDate}"/>
+
+                        <h:outputText value="Rating:" />
+                        <p:rating value="#{dataGridView.selectedBook.rating}" readonly="true"/>
+
+                        <h:outputText value="Price:" />
+                        <h:outputText value="#{dataGridView.selectedBook.price += '$'} " />
+                    </p:panelGrid>
+                </p:outputPanel>
+            </p:dialog>
+        </div>
+    </h:form>
+</h:body>
+</html>
