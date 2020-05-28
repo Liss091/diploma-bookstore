@@ -7,12 +7,12 @@
 
 <h:head>
     <title>
-        Book Store
+        Book Store - Catalog
     </title>
     <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
-    <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
 </h:head>
 <h:body>
+    <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
     <ui:include src="header.xhtml"/>
     <p:tabMenu activeIndex="#{param.i}">
         <p:menuitem value="Overview" outcome="index" icon="pi pi-star">
@@ -25,8 +25,8 @@
     <h:form id="form1">
         <h2>Find book to read here!</h2>
         <div id="searchInput">
-            <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}"/>
-            <p:commandButton value="Search" id="searchBtn" update=":form2:dataView" action="#{dataGridView.findBooksByCriteria}" style="margin-right:20px;" styleClass="ui-priority-primary" />
+            <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}" size="100"/>
+            <p:commandButton class="btn" value="Search" id="searchBtn" update=":form2:dataView" action="#{dataGridView.findBooksByCriteria}" />
         </div>
     </h:form>
     <h:form id="form2">
@@ -40,7 +40,7 @@
                         gridIcon="pi pi-th-large" listIcon="pi pi-bars">
 
                 <p:dataViewGridItem >
-                    <p:panel header="" style="text-align:center">
+                    <p:panel header="ISBN: += #{book.isbn}" style="text-align:center">
                         <h:panelGrid columns="1" style="width:100%">
                             <p:graphicImage class="viewIconGrid" library="images" name="bookIcon.png"/>
 
@@ -52,7 +52,6 @@
                             </p:commandLink>
                         </h:panelGrid>
                     </p:panel>
-                    <hr/>
                 </p:dataViewGridItem>
 
                 <p:dataViewListItem>
@@ -80,12 +79,15 @@
                             </h:panelGrid>
                         </p:outputPanel>
 
-                        <p:commandButton update="@widgetVar(bookDialog)" oncomplete="PF('bookDialog').show()" title="View Detail">
-                            <!--<h:outputText styleClass="ui-icon pi pi-search" style="margin:0 auto;" />-->
-                            <f:setPropertyActionListener value="#{book}" target="#{dataGridView.selectedBook}" />
-                        </p:commandButton>
+                        <p:panel>
+                            <p:commandButton class="btn" update="@widgetVar(bookDialog)" oncomplete="PF('bookDialog').show()" value="View Detail">
+                                <f:setPropertyActionListener value="#{book}" target="#{dataGridView.selectedBook}" />
+                            </p:commandButton>
+                            <br/>
+                            <p:commandButton class="btn" value="Add to Cart"/>
+                        </p:panel>
+
                     </h:panelGrid>
-                    <hr/>
                 </p:dataViewListItem>
             </p:dataView>
 
