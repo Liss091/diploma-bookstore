@@ -14,14 +14,7 @@
 <h:body>
     <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
     <ui:include src="header.xhtml"/>
-    <p:tabMenu activeIndex="#{param.i}">
-        <p:menuitem value="Overview" outcome="index" icon="pi pi-star">
-            <f:param name="i" value="0" />
-        </p:menuitem>
-        <p:menuitem value="Catalog" outcome="catalog" icon="pi pi-search">
-            <f:param name="i" value="1" />
-        </p:menuitem>
-    </p:tabMenu>
+    <ui:include src="menu.xhtml"/>
     <h:form id="form1">
         <h2>Find book to read here!</h2>
         <div id="searchInput">
@@ -130,5 +123,6 @@
             </p:dialog>
         </div>
     </h:form>
+    <ui:include src="footer.xhtml"/>
 </h:body>
 </html>

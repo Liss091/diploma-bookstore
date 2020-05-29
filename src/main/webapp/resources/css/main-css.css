@@ -10,7 +10,7 @@
 }
 
 .logo {
-    width: 15%;
+    width: 10%;
 }
 .detail {
     width: 70%;
@@ -28,9 +28,18 @@
 }
 
 .header {
-    height: 200px;
-    background: url("../images/blue-wood-e.jpg") repeat;
+    height: 180px;
+    background: url("../images/blue-pattern.jpg") repeat;
     background-size: cover;
+}
+
+.footer {
+    height: 100px;
+    background-color: dodgerblue;
+}
+
+.footerGrid {
+    margin: 30px;
 }
 
 #siteTitle {
@@ -49,6 +58,11 @@
     font-style: italic;
     margin-left: 20px;
     margin-bottom: 15px;
+}
+
+.footerText {
+    color: white;
+    margin-bottom: 20px;
 }
 
 hr {
