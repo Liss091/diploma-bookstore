@@ -15,11 +15,43 @@
     <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
     <ui:include src="header.xhtml"/>
     <ui:include src="menu.xhtml"/>
+    <div class="content">
     <h:form id="form1">
         <h2>Find book to read here!</h2>
         <div id="searchInput">
-            <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}" size="100"/>
-            <p:commandButton class="btn" value="Search" id="searchBtn" update=":form2:dataView" action="#{dataGridView.findBooksByCriteria}" />
+            <p:panel class="not-visible" rendered="#{!dataGridView.extendedSearch}">
+                <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}" size="100"/>
+                <p:commandLink value="Extended Search" update="@form" action="#{dataGridView.isExtendedSearch(true)}"/>
+            </p:panel>
+            <p:panel rendered="#{dataGridView.extendedSearch}" class="not-visible">
+            <h:panelGrid columns="2" columnClasses="searchLabel, searchInput" class="not-visible" >
+                <h:outputLabel value="Title:" style="font-weight: bold"/>
+                <p:inputText id="titleCriteria" value="#{dataGridView.titleCriteria}" size="50"/>
+
+                <h:outputLabel value="Authors:" style="font-weight: bold"/>
+                <p:inputText id="authorsCriteria" value="#{dataGridView.authorsCriteria}" size="50"/>
+
+                <h:outputLabel value="Categories:" style="font-weight: bold;"/>
+                <p:selectManyCheckbox id="genresCheckBox" value="#{dataGridView.selectedGenresIds}" layout="grid" columns="4">
+                    <f:selectItems value="#{dataGridView.genres}" var="genre" itemLabel="#{genre.genreName}" itemValue="#{genre.id}" />
+                </p:selectManyCheckbox>
+
+                <h:outputLabel value="Price:" style="font-weight: bold"/>
+                <h:panelGrid columns="1" style="margin-bottom: 10px">
+                    <h:outputText id="displayRange" value="Between #{dataGridView.minPrice} and #{dataGridView.maxPrice}" />
+                    <p:slider minValue="#{dataGridView.existingMinPrice}" maxValue="#{dataGridView.existingMaxPrice}"
+                              for="minPrice,maxPrice" display="displayRange" style="width: 400px" range="true"
+                              displayTemplate="Between {min} and {max}" />
+                </h:panelGrid>
+                <h:inputHidden id="minPrice" value="#{dataGridView.minPrice}" />
+                <h:inputHidden id="maxPrice" value="#{dataGridView.maxPrice}" />
+            </h:panelGrid>
+                <p:commandLink value="Simple Search" update="@form" action="#{dataGridView.isExtendedSearch(false)}"/>
+            </p:panel>
+            <div style="text-align: center; margin-bottom: 20px">
+                <p:commandButton class="btn" value="Search" id="searchBtn" update=":form2:dataView"
+                             action="#{dataGridView.findBooksByCriteria}" style="align-self: center"/>
+            </div>
         </div>
     </h:form>
     <h:form id="form2">
@@ -33,7 +65,7 @@
                         gridIcon="pi pi-th-large" listIcon="pi pi-bars">
 
                 <p:dataViewGridItem >
-                    <p:panel header="ISBN: += #{book.isbn}" style="text-align:center">
+                    <p:panel header="ISBN: #{book.isbn}" style="text-align:center">
                         <h:panelGrid columns="1" style="width:100%">
                             <p:graphicImage class="viewIconGrid" library="images" name="bookIcon.png"/>
 
@@ -72,8 +104,8 @@
                             </h:panelGrid>
                         </p:outputPanel>
 
-                        <p:panel>
-                            <p:commandButton class="btn" update="@widgetVar(bookDialog)" oncomplete="PF('bookDialog').show()" value="View Detail">
+                        <p:panel class="not-visible">
+                            <p:commandButton class="btn not-important" update="@widgetVar(bookDialog)" oncomplete="PF('bookDialog').show()" value="View Detail">
                                 <f:setPropertyActionListener value="#{book}" target="#{dataGridView.selectedBook}" />
                             </p:commandButton>
                             <br/>
@@ -87,25 +119,28 @@
             <p:dialog header="Book Info" widgetVar="bookDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
                 <p:outputPanel id="bookDetail" style="text-align:center;">
                     <p:panelGrid  columns="2" rendered="#{not empty dataGridView.selectedBook}" columnClasses="label,value">
-                        <f:facet name="header">
-                            <p:graphicImage class="detailIcon" library="images" name="bookIcon.png"/>
-                        </f:facet>
+
+                        <p:graphicImage class="detailIcon" library="images" name="bookIcon.png"/>
+                        <p:commandButton class="btn" value="Add to Cart"/>
 
                         <h:outputText value="Title:" />
-                        <h:outputText value="#{dataGridView.selectedBook.title}" style="font-weight: bold"/>
+                        <h:outputText value="#{dataGridView.selectedBook.title}" />
 
                         <h:outputText value="Authors:" />
                         <p:repeat value="#{dataGridView.selectedBook.authors}" var="author">
-                            <h:outputText value="#{author.firstName += ' '}" rendered="#{author.firstName != null}" style="font-weight: bold"/>
-                            <h:outputText value="#{author.middleName += ' '}" rendered="#{author.middleName != null}" style="font-weight: bold"/>
-                            <h:outputText value="#{author.lastName += ' '}" rendered="#{author.lastName != null}" style="font-weight: bold"/>
+                            <h:outputText value="#{author.firstName += ' '}" rendered="#{author.firstName != null}" />
+                            <h:outputText value="#{author.middleName += ' '}" rendered="#{author.middleName != null}" />
+                            <h:outputText value="#{author.lastName += ' '}" rendered="#{author.lastName != null}" />
                             <br/>
                         </p:repeat>
 
                         <h:outputText value="Categories:"/>
                         <p:repeat value="#{dataGridView.selectedBook.genres}" var="genre" varStatus="status">
-                            <h:outputText value="#{genre.genreName}#{status.last ? '' : ', '}" rendered="#{genre.genreName != null}" style="font-weight: bold"/>
+                            <h:outputText value="#{genre.genreName}#{status.last ? '' : ', '}" rendered="#{genre.genreName != null}" />
                         </p:repeat>
+
+                        <h:outputText value="Pages:"/>
+                        <h:outputText value="#{dataGridView.selectedBook.totalPages}"/>
 
                         <h:outputText value="Publisher:"/>
                         <h:outputText value="#{dataGridView.selectedBook.publisher.name}"/>
@@ -123,6 +158,7 @@
             </p:dialog>
         </div>
     </h:form>
+    </div>
     <ui:include src="footer.xhtml"/>
 </h:body>
 </html>
