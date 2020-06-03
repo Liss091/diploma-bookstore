@@ -119,6 +119,12 @@ button.ui-button.ui-state-default.not-important {
     border: none;
 }
 
+.ui-panelgrid.not-visible.center {
+    border: none;
+    margin: 25px;
+    text-align: center;
+}
+
 
 .ui-datalist ul {
     padding: 0px 10px 0 20px;

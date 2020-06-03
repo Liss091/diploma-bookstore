@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>
+        Book Store - Overview
+    </title>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+</h:head>
+<h:body>
+    <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
+    <ui:include src="page-elements/header.xhtml"/>
+    <ui:include src="page-elements/menu.xhtml"/>
+    <div class="content">
+        <h:form id="form1">
+            <h2>Your Cart</h2>
+            <h:outputText rendered="#{empty cartBean.orderedBooks}" value="Oops, Cart is empty! Proceed to Catalog to add some books here!"/>
+            <p:dataView var="book" value="#{cartBean.orderedBooks}" rendered="#{not empty cartBean.orderedBooks}" listIcon="pi pi-bars">
+
+                <p:dataViewListItem>
+                    <h:panelGrid columns="3" style="width:100%" columnClasses="logo,detail">
+                        <p:graphicImage class="viewIconList" library="images" name="bookIcon.png"/>
+
+                        <p:outputPanel>
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h:outputText value="Title:" />
+                                <h:outputText value="#{book.title}" style="font-weight: bold"/>
+
+                                <h:outputText value="Authors:" />
+                                <p:repeat value="#{book.authors}" var="author">
+                                    <h:outputText value="#{author.firstName += ' '}" rendered="#{author.firstName != null}" style="font-weight: bold"/>
+                                    <h:outputText value="#{author.middleName += ' '}" rendered="#{author.middleName != null}" style="font-weight: bold"/>
+                                    <h:outputText value="#{author.lastName += ' '}" rendered="#{author.lastName != null}" style="font-weight: bold"/>
+                                    <br/>
+                                </p:repeat>
+
+                                <h:outputText value="Rating:" />
+                                <p:rating value="#{book.rating.intValue()}" readonly="true"/>
+
+                                <h:outputText value="Price:" />
+                                <h:outputText value="#{book.price += '$'} " style="font-weight: bold"/>
+                            </h:panelGrid>
+                        </p:outputPanel>
+
+                        <p:panel styleClass="not-visible">
+                            <p:outputLabel for="quantity" value="Q-ty"/>
+                            <p:inputNumber id="quantity" value="#{cartBean.orderedBooksCount[book]}" decimalPlaces="0" size="2">
+                                <f:converter converterId="javax.faces.Integer" />
+                                <p:ajax event="change" listener="#{cartBean.countTotalAmount}" update=":form1:total" process="@this" />
+                            </p:inputNumber>
+                        </p:panel>
+                    </h:panelGrid>
+                </p:dataViewListItem>
+            </p:dataView>
+            <p:outputPanel rendered="#{!empty cartBean.orderedBooks}" id="total" class="not-visible center">
+                <h:outputLabel value="Total Amount" style="font-weight: bold; margin: 10px"/>
+                <h:outputText id="totalAmount" value="#{cartBean.totalAmount}" style="margin: 10px"/>
+            </p:outputPanel>
+            <div style="margin-bottom: 30px; text-align: center">
+                <p:linkButton outcome="checkout" rendered="#{!empty cartBean.orderedBooks}" class="btn" value="Proceed to Checkout"/>
+            </div>
+
+        </h:form>
+    </div>
+    <ui:include src="page-elements/footer.xhtml"/>
+</h:body>
+</html>

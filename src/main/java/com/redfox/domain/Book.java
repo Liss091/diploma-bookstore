@@ -15,6 +15,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Date;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -134,6 +135,25 @@ public class Book implements Serializable {
 
     public void setGenres(Set<Genre> genres) {
         this.genres = genres;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return getTitle().equals(book.getTitle()) &&
+                Objects.equals(getIsbn(), book.getIsbn()) &&
+                Objects.equals(getPrice(), book.getPrice()) &&
+                Objects.equals(getPublishedDate(), book.getPublishedDate()) &&
+                Objects.equals(getAuthors(), book.getAuthors()) &&
+                Objects.equals(getGenres(), book.getGenres()) &&
+                Objects.equals(getPublisher(), book.getPublisher());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTitle(), getIsbn(), getPrice(), getPublishedDate(), getAuthors(), getGenres(), getPublisher());
     }
 
     @Override
