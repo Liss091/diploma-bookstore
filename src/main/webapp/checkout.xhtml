@@ -16,30 +16,30 @@
     <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
     <ui:include src="page-elements/header.xhtml"/>
     <ui:include src="page-elements/menu.xhtml"/>
-    <div class="content">
+    <div class="content" style="text-align: center;">
         <h2>Provide shipping info</h2>
         <h:form id="form1">
             <h:panelGrid columns="2" width="60%">
                 <p:outputLabel value="First Name"/>
-                <p:inputText value="#{checkout.firstName}" required="true"/>
+                <p:inputText value="#{checkout.firstName}" required="true" size="50"/>
 
                 <p:outputLabel value="Last Name"/>
-                <p:inputText value="#{checkout.lastName}" required="true"/>
+                <p:inputText value="#{checkout.lastName}" required="true" size="50"/>
 
                 <p:outputLabel value="Address Line 1"/>
-                <p:inputText value="#{checkout.addressLine1}" required="true"/>
+                <p:inputText value="#{checkout.addressLine1}" required="true" size="40"/>
 
                 <p:outputLabel value="Address Line 2"/>
-                <p:inputText value="#{checkout.addressLine2}" />
+                <p:inputText value="#{checkout.addressLine2}" size="40"/>
 
                 <p:outputLabel value="Address Line 3"/>
-                <p:inputText value="#{checkout.addressLine3}" />
+                <p:inputText value="#{checkout.addressLine3}" size="40"/>
 
                 <p:outputLabel value="Phone number"/>
-                <p:inputText value="#{checkout.phoneNumber}" required="true"/>
+                <p:inputMask value="#{checkout.phoneNumber}" required="true" mask="(999) 999-9999"/>
 
                 <p:outputLabel value="Email address"/>
-                <p:inputText value="#{checkout.email}" required="true" >
+                <p:inputText value="#{checkout.email}" required="true" size="40" >
                     <p:keyFilter regEx="/[a-z0-9_\.\-@]/i"/>
                 </p:inputText>
 

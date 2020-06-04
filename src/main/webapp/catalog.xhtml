@@ -21,6 +21,7 @@
         <div id="searchInput">
             <p:panel class="not-visible" rendered="#{!dataGridView.extendedSearch}">
                 <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}" size="100"/>
+                <p:watermark for="searchCriteria" value="Search by Title, Author or Category" id="watermark" />
                 <p:commandLink value="Extended Search" update="@form" action="#{dataGridView.isExtendedSearch(true)}"/>
             </p:panel>
             <p:panel rendered="#{dataGridView.extendedSearch}" class="not-visible">

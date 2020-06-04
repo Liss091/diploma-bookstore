@@ -19,9 +19,11 @@
     <div class="content">
         <h2>Provide shipping info</h2>
         <h:form id="form1">
-            <h2>Success!</h2>
-            <h:outputText value="We`ll contact you soon to confirm shipping and payment details."/>
-            <p:commandButton value="Return to Overview page" action="#{checkout.returnToHomePage}" ajax="false" style="margin-top: 25px;"/>
+            <div style="text-align: center;">
+                <h2>Success!</h2>
+                <h:outputText value="We`ll contact you soon to confirm shipping and payment details." style="margin-top: 40px"/>
+                <p:commandButton value="Return to Overview page" action="#{checkout.returnToHomePage}" ajax="false" style="margin-top: 40px;"/>
+            </div>
         </h:form>
     </div>
     <ui:include src="page-elements/footer.xhtml"/>
