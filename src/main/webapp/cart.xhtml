@@ -62,7 +62,10 @@
                 <h:outputText id="totalAmount" value="#{cartBean.totalAmount}" style="margin: 10px"/>
             </p:outputPanel>
             <div style="margin-bottom: 30px; text-align: center">
-                <p:linkButton outcome="checkout" rendered="#{!empty cartBean.orderedBooks}" class="btn" value="Proceed to Checkout"/>
+                <p:commandButton action="checkout" ajax="false" rendered="#{!empty cartBean.orderedBooks}" class="btn" value="Proceed to Checkout">
+                    <f:setPropertyActionListener value="#{cartBean.orderedBooks}" target="#{checkout.bookList}"/>
+                    <f:setPropertyActionListener value="#{cartBean.totalAmount}" target="#{checkout.totalAmount}"/>
+                </p:commandButton>
             </div>
 
         </h:form>

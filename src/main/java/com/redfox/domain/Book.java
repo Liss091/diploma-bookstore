@@ -5,6 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -23,7 +24,7 @@ import java.util.Set;
 public class Book implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "book_id")
     private Integer id;
 
@@ -54,7 +55,7 @@ public class Book implements Serializable {
     private Set<Genre> genres;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "publisher_id", nullable = false)
+    @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
     public Integer getId() {

@@ -1,6 +1,7 @@
 package com.redfox.services.impl;
 
 import com.redfox.dao.OrderDao;
+import com.redfox.domain.Order;
 import com.redfox.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void saveOrder() {
-
+    public void saveOrder(Order newOrder) {
+        orderDao.save(newOrder);
     }
+
 }

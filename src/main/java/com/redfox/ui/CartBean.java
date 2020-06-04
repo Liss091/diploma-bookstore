@@ -1,22 +1,16 @@
 package com.redfox.ui;
 
 import com.redfox.domain.Book;
-import com.redfox.services.OrderService;
-import org.primefaces.PrimeFaces;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -29,9 +23,6 @@ public class CartBean implements Serializable {
     private Map<Book, Integer> orderedBooksCount;
 
     private Set<Book> orderedBooks;
-
-    @Inject
-    private OrderService orderService;
 
     @PostConstruct
     public void init() {
@@ -55,6 +46,11 @@ public class CartBean implements Serializable {
             Integer value = entry.getValue();
             totalAmount = totalAmount.add(key.getPrice().multiply(BigDecimal.valueOf(value)));
         }
+    }
+
+
+    public String proccedToCheckout() {
+        return "/checkout/checkout";
     }
 
     public void showMessageAddToCart(String msg) {
@@ -87,7 +83,4 @@ public class CartBean implements Serializable {
         this.totalAmount = totalAmount;
     }
 
-    public void setOrderService(OrderService orderService) {
-        this.orderService = orderService;
-    }
 }

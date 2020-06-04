@@ -1,6 +1,8 @@
 package com.redfox.services;
 
+import com.redfox.domain.Order;
+
 public interface OrderService {
 
-    void saveOrder();
+    void saveOrder(Order newOrder);
 }

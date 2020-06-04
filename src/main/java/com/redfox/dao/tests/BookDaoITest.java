@@ -36,5 +36,14 @@ public class BookDaoITest {
         Assert.assertEquals(1L, books.get(0).getId().longValue());
     }
 
+    @Test
+    public void testSave() {
+        Book book = new Book();
+        book.setId(2000);
+        book.setTitle("Title");
+
+        testObject.save(book);
+    }
+
 
 }

@@ -147,3 +147,8 @@ button.ui-button.ui-state-default.not-important {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.ui-linkbutton.ui-button.ui-state-defaul a {
+    font-family: Century Gothic, sans-serif;
+    font-size: 18px;
+}

@@ -21,8 +21,40 @@
         <h:form id="form1">
             <h:panelGrid columns="2" width="60%">
                 <p:outputLabel value="First Name"/>
-                <p:inputText value=""
+                <p:inputText value="#{checkout.firstName}" required="true"/>
+
+                <p:outputLabel value="Last Name"/>
+                <p:inputText value="#{checkout.lastName}" required="true"/>
+
+                <p:outputLabel value="Address Line 1"/>
+                <p:inputText value="#{checkout.addressLine1}" required="true"/>
+
+                <p:outputLabel value="Address Line 2"/>
+                <p:inputText value="#{checkout.addressLine2}" />
+
+                <p:outputLabel value="Address Line 3"/>
+                <p:inputText value="#{checkout.addressLine3}" />
+
+                <p:outputLabel value="Phone number"/>
+                <p:inputText value="#{checkout.phoneNumber}" required="true"/>
+
+                <p:outputLabel value="Email address"/>
+                <p:inputText value="#{checkout.email}" required="true" >
+                    <p:keyFilter regEx="/[a-z0-9_\.\-@]/i"/>
+                </p:inputText>
+
+                <p:outputLabel value="Ordered Books"/>
+                <p:repeat value="#{checkout.bookList}" var="book">
+                    <h:outputText value="#{book.title}"/>
+                    <br/>
+                </p:repeat>
+
+                <p:outputLabel value="Total Amount" style="font-weight: bold"/>
+                <h:outputText value="#{checkout.totalAmount}"/>
             </h:panelGrid>
+
+            <p:commandButton value="Confirm" class="btn" id="confirmBtn" action="#{checkout.confirmOrder}" ajax="false"/>
+
         </h:form>
     </div>
     <ui:include src="page-elements/footer.xhtml"/>
