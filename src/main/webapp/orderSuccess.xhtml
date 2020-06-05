@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
     <ui:include src="page-elements/header.xhtml"/>
     <ui:include src="page-elements/menu.xhtml"/>
+    <div class="wrapper">
     <div class="content">
         <h2>Provide shipping info</h2>
         <h:form id="form1">
@@ -25,6 +26,7 @@
                 <p:commandButton value="Return to Overview page" action="#{checkout.returnToHomePage}" ajax="false" style="margin-top: 40px;"/>
             </div>
         </h:form>
+    </div>
     </div>
     <ui:include src="page-elements/footer.xhtml"/>
 </h:body>

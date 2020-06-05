@@ -7,24 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36402d6d-079a-465d-b755-d6ba4ecd3935" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/redfox/services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/redfox/ui/CartBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/redfox/ui/Checkout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/cart.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/checkout.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/redfox/ui/OverviewBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/contacts.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shipping.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/redfox/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redfox/domain/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redfox/services/BooksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redfox/services/BooksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/BooksServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/BooksServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/catalog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/catalog.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/footer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page-elements/footer.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page-elements/header.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/checkout.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/checkout.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/menu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/orderSuccess.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orderSuccess.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page-elements/footer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page-elements/footer.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main-css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main-css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-1.0-SNAPSHOT/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bookstore-1.0-SNAPSHOT/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore-1.0-SNAPSHOT/WEB-INF/faces-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bookstore-1.0-SNAPSHOT/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bookstore-1.0-SNAPSHOT/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/bookIcon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -39,28 +40,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/catalog.xhtml">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/contacts.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1427">
-              <caret line="84" column="60" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/cart.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/checkout.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            <state relative-caret-position="65">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -68,132 +51,85 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main-css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+            <state relative-caret-position="20">
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/cart.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="23" column="126" selection-start-line="23" selection-start-column="126" selection-end-line="23" selection-end-column="126" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/ui/CartBean.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/catalog.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="124">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/orderSuccess.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="12" column="40" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/shipping.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/footer.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="10" column="82" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/impl/BooksServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1911#1912#0" expanded="true" />
-                <element signature="e#1945#1946#0" expanded="true" />
-                <element signature="e#2114#2115#0" expanded="true" />
-                <element signature="e#2149#2150#0" expanded="true" />
-                <element signature="e#2208#2209#0" expanded="true" />
-                <element signature="e#2256#2257#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/ui/Checkout.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/BooksService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="480">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/impl/OrderServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/impl/SearchServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="47" column="101" selection-start-line="47" selection-start-column="101" selection-end-line="47" selection-end-column="101" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/ui/DataGridView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="48" column="22" selection-start-line="47" selection-start-column="4" selection-end-line="48" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2489#2490#0" expanded="true" />
-                <element signature="e#2523#2524#0" expanded="true" />
-                <element signature="e#2559#2560#0" expanded="true" />
-                <element signature="e#2587#2588#0" expanded="true" />
-                <element signature="e#2652#2653#0" expanded="true" />
-                <element signature="e#2702#2703#0" expanded="true" />
-                <element signature="e#2739#2740#0" expanded="true" />
-                <element signature="e#2774#2775#0" expanded="true" />
-                <element signature="e#2828#2829#0" expanded="true" />
-                <element signature="e#2876#2877#0" expanded="true" />
-                <element signature="e#2917#2918#0" expanded="true" />
-                <element signature="e#2954#2955#0" expanded="true" />
-                <element signature="e#3014#3015#0" expanded="true" />
-                <element signature="e#3066#3067#0" expanded="true" />
-                <element signature="e#3105#3106#0" expanded="true" />
-                <element signature="e#3136#3137#0" expanded="true" />
-                <element signature="e#3188#3189#0" expanded="true" />
-                <element signature="e#3228#3229#0" expanded="true" />
-                <element signature="e#3270#3271#0" expanded="true" />
-                <element signature="e#3307#3308#0" expanded="true" />
-                <element signature="e#3368#3369#0" expanded="true" />
-                <element signature="e#3420#3421#0" expanded="true" />
-                <element signature="e#3460#3461#0" expanded="true" />
-                <element signature="e#3496#3497#0" expanded="true" />
-                <element signature="e#3554#3555#0" expanded="true" />
-                <element signature="e#3604#3605#0" expanded="true" />
-                <element signature="e#3646#3647#0" expanded="true" />
-                <element signature="e#3684#3685#0" expanded="true" />
-                <element signature="e#3746#3747#0" expanded="true" />
-                <element signature="e#3800#3801#0" expanded="true" />
-                <element signature="e#3838#3839#0" expanded="true" />
-                <element signature="e#3867#3868#0" expanded="true" />
-                <element signature="e#3916#3917#0" expanded="true" />
-                <element signature="e#3952#3953#0" expanded="true" />
-                <element signature="e#4211#4212#0" expanded="true" />
-                <element signature="e#4242#4243#0" expanded="true" />
-                <element signature="e#4294#4295#0" expanded="true" />
-                <element signature="e#4334#4335#0" expanded="true" />
-                <element signature="e#4373#4374#0" expanded="true" />
-                <element signature="e#4404#4405#0" expanded="true" />
-                <element signature="e#4456#4457#0" expanded="true" />
-                <element signature="e#4496#4497#0" expanded="true" />
-                <element signature="e#4543#4544#0" expanded="true" />
-                <element signature="e#4582#4583#0" expanded="true" />
-                <element signature="e#4650#4651#0" expanded="true" />
-                <element signature="e#4706#4707#0" expanded="true" />
-                <element signature="e#4753#4754#0" expanded="true" />
-                <element signature="e#4792#4793#0" expanded="true" />
-                <element signature="e#4860#4861#0" expanded="true" />
-                <element signature="e#4916#4917#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,12 +151,16 @@
       <find>ui-dataview-row</find>
       <find>detail</find>
       <find>ui-dataview-list</find>
-      <find>detailIcon</find>
       <find>not-v</find>
       <find>hib</find>
       <find>@</find>
       <find>not</find>
+      <find>ClassNotFoundException: javax.enterprise.context.spi.Context</find>
       <find>total</find>
+      <find>home</find>
+      <find>conte</find>
+      <find>conten</find>
+      <find>detailIcon</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -234,34 +174,44 @@
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/AuthorDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/PublisherDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/BooksServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/BooksService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/BookDaoITest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/config/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/menu.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/footer.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/GenreDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/SearchService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDaoCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/SearchServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/impl/BookDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/ui/Cart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/ui/DataGridView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/redfox/domain/Book.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/catalog.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/checkout/checkout.xhtml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/redfox/ui/CartBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main-css.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/cart.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/domain/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/BookDaoITest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/OrderDaoITest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/domain/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/ui/Checkout.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/checkout.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/orderSuccess.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/impl/BooksServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/ui/OverviewBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redfox/services/BooksService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/contacts.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/shipping.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/page-elements/footer.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/cart.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/main-css.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/catalog.xhtml" />
       </list>
     </option>
   </component>
@@ -295,9 +245,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="39" />
-    <option name="y" value="34" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="124" />
     <option name="width" value="1226" />
     <option name="height" value="735" />
   </component>
@@ -409,6 +358,14 @@
               <item name="diploma-bookstore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diploma-bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -436,6 +393,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diploma-bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -446,7 +411,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591209228175" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591298942061" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -457,19 +422,19 @@
     <property name="project.structure.side.proportion" value="0.62413794" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp\page-elements" />
-      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp\pages" />
-      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp\resources" />
-      <recent name="C:\extreme-course\diploma-bookstore\src\main\resources" />
-      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\diploma-bookstore\src\main\java\com\redfox" />
       <recent name="C:\diploma-bookstore\src\main\resources" />
       <recent name="C:\diploma-bookstore\src\main\java" />
       <recent name="C:\diploma-bookstore" />
       <recent name="C:\diploma-bookstore\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp" />
+      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp\checkout" />
+      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp\page-elements" />
+      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp\pages" />
+      <recent name="C:\extreme-course\diploma-bookstore\src\main\webapp\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -512,6 +477,38 @@
       <option name="PACKAGE_NAME" value="com.redfox.dao.tests" />
       <option name="MAIN_CLASS_NAME" value="com.redfox.dao.tests.BookDaoITest" />
       <option name="METHOD_NAME" value="testFindByCriteria" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookDaoITest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.redfox.dao.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.redfox.dao.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.redfox.dao.tests.BookDaoITest" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderDaoITest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.redfox.dao.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.redfox.dao.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.redfox.dao.tests.OrderDaoITest" />
+      <option name="METHOD_NAME" value="save" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -594,10 +591,14 @@
     <list>
       <item itemvalue="JUnit.BookDaoITest.testFindAll" />
       <item itemvalue="JUnit.BookDaoITest.testFindByCriteria" />
+      <item itemvalue="JUnit.BookDaoITest.testSave" />
+      <item itemvalue="JUnit.OrderDaoITest.save" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.38" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderDaoITest.save" />
+        <item itemvalue="JUnit.BookDaoITest.testSave" />
         <item itemvalue="JUnit.BookDaoITest.testFindByCriteria" />
         <item itemvalue="JUnit.BookDaoITest.testFindAll" />
       </list>
@@ -621,7 +622,10 @@
       <workItem from="1590325882647" duration="6900000" />
       <workItem from="1590687845027" duration="48820000" />
       <workItem from="1591037212660" duration="5299000" />
-      <workItem from="1591198527791" duration="10050000" />
+      <workItem from="1591198527791" duration="28336000" />
+      <workItem from="1591256008899" duration="11352000" />
+      <workItem from="1591297117062" duration="1696000" />
+      <workItem from="1591351765281" duration="7049000" />
     </task>
     <task id="LOCAL-00001" summary="first pages">
       <created>1590313183154</created>
@@ -651,49 +655,69 @@
       <option name="project" value="LOCAL" />
       <updated>1590944755328</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cart page and functionality">
+      <created>1591209399062</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591209399081</updated>
+    </task>
+    <task id="LOCAL-00006" summary="checkout process">
+      <created>1591261706730</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591261706730</updated>
+    </task>
+    <task id="LOCAL-00007" summary="css and minor changes">
+      <created>1591267500072</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591267500072</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.20 at 23h 12m 52s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="BookDaoITest_testSave - 2020.06.04 at 01h 06m 32s.xml">
+      <configuration name="BookDaoITest.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.20 at 23h 45m 15s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="BookDaoITest_testSave - 2020.06.04 at 01h 08m 18s.xml">
+      <configuration name="BookDaoITest.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.20 at 23h 47m 40s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="BookDaoITest_testSave - 2020.06.04 at 01h 13m 51s.xml">
+      <configuration name="BookDaoITest.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.20 at 23h 52m 39s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="BookDaoITest_testSave - 2020.06.04 at 01h 15m 38s.xml">
+      <configuration name="BookDaoITest.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.20 at 23h 53m 47s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="OrderDaoITest_save - 2020.06.04 at 09h 20m 05s.xml">
+      <configuration name="OrderDaoITest.save" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.20 at 23h 55m 07s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="OrderDaoITest_save - 2020.06.04 at 09h 22m 57s.xml">
+      <configuration name="OrderDaoITest.save" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.20 at 23h 56m 02s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="OrderDaoITest_save - 2020.06.04 at 09h 27m 31s.xml">
+      <configuration name="OrderDaoITest.save" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.21 at 00h 00m 26s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="OrderDaoITest_save - 2020.06.04 at 09h 36m 29s.xml">
+      <configuration name="OrderDaoITest.save" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindAll - 2020.05.21 at 00h 01m 35s.xml">
-      <configuration name="BookDaoITest.testFindAll" configurationId="JUnit" />
+    <history-entry file="OrderDaoITest_save - 2020.06.04 at 09h 47m 59s.xml">
+      <configuration name="OrderDaoITest.save" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookDaoITest_testFindByCriteria - 2020.05.21 at 14h 18m 22s.xml">
-      <configuration name="BookDaoITest.testFindByCriteria" configurationId="JUnit" />
+    <history-entry file="OrderDaoITest_save - 2020.06.04 at 09h 51m 45s.xml">
+      <configuration name="OrderDaoITest.save" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143446000" />
+    <option name="totallyTimeSpent" value="181829000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="124" y="0" width="1226" height="735" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22163388" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24356775" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -703,20 +727,20 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44680852" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.5008183" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4551495" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47954175" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33224222" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33222592" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289689" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.695581" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="15" visible="true" weight="0.45348838" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -739,7 +763,10 @@
     <MESSAGE value="add css" />
     <MESSAGE value="add menu and footer" />
     <MESSAGE value="extended search" />
-    <option name="LAST_COMMIT_MESSAGE" value="extended search" />
+    <MESSAGE value="cart page and functionality" />
+    <MESSAGE value="checkout process" />
+    <MESSAGE value="css and minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="css and minor changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -770,15 +797,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/redfox/ui/CartBean.java</url>
-          <line>55</line>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/redfox/ui/CartBean.java</url>
-          <line>54</line>
+          <line>45</line>
           <properties />
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/OrderDaoITest.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/OrderDaoITest.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -840,120 +879,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/domain/Publisher.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/AuthorDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/OrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/PublisherDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/domain/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/impl/BooksServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.1.7.RELEASE/spring-orm-5.1.7.RELEASE.jar!/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/PersistenceContext.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/domain/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/7.0/primefaces-7.0.jar!/org/primefaces/PrimeFaces.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="633" column="19" selection-start-line="633" selection-start-column="19" selection-end-line="633" selection-end-column="19" />
-          <folding>
-            <element signature="e#23072#23073#0" expanded="true" />
-            <element signature="e#23112#23113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/java/net/SocketInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/BookDaoITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="31" column="71" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/7.0/primefaces-7.0.jar!/META-INF/primefaces-p.taglib.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-280">
@@ -970,29 +895,8 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/maven-archiver/pom.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/header.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="20" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/footer.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/images/blue-pattern.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -1028,13 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.2.8/postgresql-42.2.8.jar!/org/postgresql/jdbc/PgConnection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -1046,16 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="195" selection-start-line="195" selection-end-line="195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="37" column="78" lean-forward="true" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,51 +966,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/domain/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="140" column="37" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/SearchService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="12" column="135" selection-start-line="12" selection-start-column="135" selection-end-line="12" selection-end-column="135" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/BooksService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1220,61 +1066,268 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/catalog.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/checkout-flow.xml" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1427">
-          <caret line="84" column="60" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="60" />
+        <state relative-caret-position="20">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main-css.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="124" column="22" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/GenerationType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="120">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/cart.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/domain/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        <state relative-caret-position="380">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding>
+            <element signature="e#2635#2636#0" expanded="true" />
+            <element signature="e#2665#2666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/BookDaoITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="31" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.8.RELEASE/spring-data-jpa-2.1.8.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/tests/OrderDaoITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/OrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/header.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/checkout.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        <state relative-caret-position="180">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/ui/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="76">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/domain/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="e#2158#2159#0" expanded="true" />
+            <element signature="e#2221#2222#0" expanded="true" />
+            <element signature="e#2269#2270#0" expanded="true" />
+            <element signature="e#2305#2306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/BooksService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/ui/CartBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="14" />
+          <caret line="16" selection-start-line="16" selection-end-line="17" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2149#2150#0" expanded="true" />
-            <element signature="e#2208#2209#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/ui/OverviewBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/services/impl/BooksServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="e#573#574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redfox/dao/BookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/contacts.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/shipping.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/footer.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="10" column="82" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/orderSuccess.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="12" column="40" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page-elements/menu.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/cart.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="23" column="126" selection-start-line="23" selection-start-column="126" selection-end-line="23" selection-end-column="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/main-css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/catalog.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>

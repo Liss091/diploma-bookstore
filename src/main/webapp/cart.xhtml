@@ -16,10 +16,14 @@
     <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
     <ui:include src="page-elements/header.xhtml"/>
     <ui:include src="page-elements/menu.xhtml"/>
+    <div class="wrapper">
     <div class="content">
         <h:form id="form1">
             <h2>Your Cart</h2>
             <h:outputText rendered="#{empty cartBean.orderedBooks}" value="Oops, Cart is empty! Proceed to Catalog to add some books here!"/>
+            <p:linkButton value="Catalog" rendered="#{empty cartBean.orderedBooks}" outcome="catalog" style="margin-left: 15px;">
+                <f:param name="i" value="1" />
+            </p:linkButton>
             <p:dataView var="book" value="#{cartBean.orderedBooks}" rendered="#{not empty cartBean.orderedBooks}" listIcon="pi pi-bars">
 
                 <p:dataViewListItem>
@@ -69,6 +73,7 @@
             </div>
 
         </h:form>
+    </div>
     </div>
     <ui:include src="page-elements/footer.xhtml"/>
 </h:body>

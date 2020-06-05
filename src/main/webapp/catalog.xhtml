@@ -15,45 +15,46 @@
     <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
     <ui:include src="page-elements/header.xhtml"/>
     <ui:include src="page-elements/menu.xhtml"/>
+    <div class="wrapper">
     <div class="content">
-    <h:form id="form1">
-        <h2>Find book to read here!</h2>
-        <div id="searchInput">
-            <p:panel class="not-visible" rendered="#{!dataGridView.extendedSearch}">
-                <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}" size="100"/>
-                <p:watermark for="searchCriteria" value="Search by Title, Author or Category" id="watermark" />
-                <p:commandLink value="Extended Search" update="@form" action="#{dataGridView.isExtendedSearch(true)}"/>
-            </p:panel>
-            <p:panel rendered="#{dataGridView.extendedSearch}" class="not-visible">
-            <h:panelGrid columns="2" columnClasses="searchLabel, searchInput" class="not-visible" >
-                <h:outputLabel value="Title:" style="font-weight: bold"/>
-                <p:inputText id="titleCriteria" value="#{dataGridView.titleCriteria}" size="50"/>
+        <h:form id="form1">
+            <h2>Find book to read here!</h2>
+            <div id="searchInput">
+                <p:panel class="not-visible" rendered="#{!dataGridView.extendedSearch}">
+                    <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}" size="100"/>
+                    <p:watermark for="searchCriteria" value="Search by Title, Author or Category" id="watermark" />
+                    <p:commandLink value="Extended Search" update="@form" action="#{dataGridView.isExtendedSearch(true)}"/>
+                </p:panel>
+                <p:panel rendered="#{dataGridView.extendedSearch}" class="not-visible">
+                <h:panelGrid columns="2" columnClasses="searchLabel, searchInput" class="not-visible" >
+                    <h:outputLabel value="Title:" style="font-weight: bold"/>
+                    <p:inputText id="titleCriteria" value="#{dataGridView.titleCriteria}" size="50"/>
 
-                <h:outputLabel value="Authors:" style="font-weight: bold"/>
-                <p:inputText id="authorsCriteria" value="#{dataGridView.authorsCriteria}" size="50"/>
+                    <h:outputLabel value="Authors:" style="font-weight: bold"/>
+                    <p:inputText id="authorsCriteria" value="#{dataGridView.authorsCriteria}" size="50"/>
 
-                <h:outputLabel value="Categories:" style="font-weight: bold;"/>
-                <p:selectManyCheckbox id="genresCheckBox" value="#{dataGridView.selectedGenresIds}" layout="grid" columns="4">
-                    <f:selectItems value="#{dataGridView.genres}" var="genre" itemLabel="#{genre.genreName}" itemValue="#{genre.id}" />
-                </p:selectManyCheckbox>
+                    <h:outputLabel value="Categories:" style="font-weight: bold;"/>
+                    <p:selectManyCheckbox id="genresCheckBox" value="#{dataGridView.selectedGenresIds}" layout="grid" columns="4">
+                        <f:selectItems value="#{dataGridView.genres}" var="genre" itemLabel="#{genre.genreName}" itemValue="#{genre.id}" />
+                    </p:selectManyCheckbox>
 
-                <h:outputLabel value="Price:" style="font-weight: bold"/>
-                <h:panelGrid columns="1" style="margin-bottom: 10px">
-                    <h:outputText id="displayRange" value="Between #{dataGridView.minPrice} and #{dataGridView.maxPrice}" />
-                    <p:slider minValue="#{dataGridView.existingMinPrice}" maxValue="#{dataGridView.existingMaxPrice}"
-                              for="minPrice,maxPrice" display="displayRange" style="width: 400px" range="true"
-                              displayTemplate="Between {min} and {max}" />
+                    <h:outputLabel value="Price:" style="font-weight: bold"/>
+                    <h:panelGrid columns="1" style="margin-bottom: 10px">
+                        <h:outputText id="displayRange" value="Between #{dataGridView.minPrice} and #{dataGridView.maxPrice}" />
+                        <p:slider minValue="#{dataGridView.existingMinPrice}" maxValue="#{dataGridView.existingMaxPrice}"
+                                  for="minPrice,maxPrice" display="displayRange" style="width: 400px" range="true"
+                                  displayTemplate="Between {min} and {max}" />
+                    </h:panelGrid>
+                    <h:inputHidden id="minPrice" value="#{dataGridView.minPrice}" />
+                    <h:inputHidden id="maxPrice" value="#{dataGridView.maxPrice}" />
                 </h:panelGrid>
-                <h:inputHidden id="minPrice" value="#{dataGridView.minPrice}" />
-                <h:inputHidden id="maxPrice" value="#{dataGridView.maxPrice}" />
-            </h:panelGrid>
-                <p:commandLink value="Simple Search" update="@form" action="#{dataGridView.isExtendedSearch(false)}"/>
-            </p:panel>
-            <div style="text-align: center; margin-bottom: 20px">
-                <p:commandButton class="btn" value="Search" id="searchBtn" update=":form2:dataView"
-                             action="#{dataGridView.findBooksByCriteria}" style="align-self: center"/>
+                    <p:commandLink value="Simple Search" update="@form" action="#{dataGridView.isExtendedSearch(false)}"/>
+                </p:panel>
+                <div style="text-align: center; margin-bottom: 20px">
+                    <p:commandButton class="btn" value="Search" id="searchBtn" update=":form2:dataView"
+                                 action="#{dataGridView.findBooksByCriteria}" style="align-self: center"/>
+                </div>
             </div>
-        </div>
     </h:form>
     <h:form id="form2">
         <p:growl id="growl" showDetail="true" sticky="true" />
@@ -102,7 +103,7 @@
                                 <p:rating value="#{book.rating.intValue()}" readonly="true"/>
 
                                 <h:outputText value="Price:" />
-                                <h:outputText value="#{book.price += '$'} " style="font-weight: bold"/>
+                                <h:outputText value="$#{book.price} " style="font-weight: bold"/>
                             </h:panelGrid>
                         </p:outputPanel>
 
@@ -160,6 +161,7 @@
             </p:dialog>
         </div>
     </h:form>
+    </div>
     </div>
     <ui:include src="page-elements/footer.xhtml"/>
 </h:body>

@@ -18,7 +18,8 @@
     <ui:include src="page-elements/menu.xhtml"/>
     <div class="wrapper">
         <div class="content">
-            <h:form>
+            <h:form id="form1">
+                <p:growl id="growl" showDetail="true" sticky="true" />
                 <h2>Welcome to our Bookstore</h2>
                 <p>Bookstore gives you an online shopping cart and point-of-sale system for your
                     school's bookstore. Online shoppers can browse and purchase items via the
@@ -29,6 +30,19 @@
                     inventory, process online orders, and run sales reports. Additionally,
                     all Bookstore transactions are automatically fed into your General Ledger.
                 </p>
+                <p:carousel value="#{overviewBean.topRatedBooks}" headerText="Our Top Rated Books" var="book" itemStyle="text-align:center" responsive="true">
+                    <p:panelGrid columns="1" style="width:100%;margin:10px 0px" layout="grid" styleClass="ui-panelgrid-blank">
+                        <f:facet name="header">
+                            <p:graphicImage class="viewIconGrid" library="images" name="bookIcon.png"/>
+                        </f:facet>
+
+                        <h:outputText value="#{book.title}"  />
+                        <p:rating value="#{book.rating.intValue()}" readonly="true"/>
+                        <h:outputText value="$#{book.price}" />
+
+                        <p:commandButton class="btn" value="Add to Cart" action="#{cartBean.addToCart(book)}" update=":form1"/>
+                    </p:panelGrid>
+                </p:carousel>
             </h:form>
         </div>
     </div>

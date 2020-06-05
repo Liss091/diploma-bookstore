@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>
+        Book Store - Overview
+    </title>
+    <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+</h:head>
+<h:body>
+    <link rel="stylesheet" type="text/css" href="resources/css/main-css.css" media="all"/>
+    <ui:include src="page-elements/header.xhtml"/>
+    <ui:include src="page-elements/menu.xhtml"/>
+    <div class="wrapper">
+        <div class="content" >
+            <h2>Contact info</h2>
+            <h:form id="form1" >
+                <div>
+                    <p:panelGrid columns="3">
+                        <p:outputLabel value="Call-center"/>
+                        <p:outputLabel value="Call Center Schedule"/>
+                        <p:outputLabel value="Email Address"/>
+
+                        <p:outputPanel styleClass="not-visible">
+                            <h:outputText value="+38 (044) 364-11-33"/><br/>
+                            <h:outputText value="+38 (067) 474-11-33"/><br/>
+                            <h:outputText value=" +38 (050) 474-11-33"/><br/>
+                            <h:outputText value="+38 (063) 874-11-33"/><br/>
+                        </p:outputPanel>
+                        <p:outputPanel styleClass="not-visible">
+                            <h:outputText value="Mon-Fri: 08:00 - 22:00"/><br/>
+                            <h:outputText value="Sat: 09:00 - 20:00"/><br/>
+                            <h:outputText value="Sun: 09:00 - 19:00"/><br/>
+                        </p:outputPanel>
+
+                        <h:outputText value="info@bookstore.com"/>
+                    </p:panelGrid>
+                    <p>If you have an urgent question, please contact our support team support@bookstore.com
+                        We do not have a Viber account.
+                        The store does not respond to SMS.</p>
+                    <p>All commercial and private offers should be sent to contact@bookstore.com</p>
+                </div>
+            </h:form>
+        </div>
+    </div>
+    <ui:include src="page-elements/footer.xhtml"/>
+</h:body>
+</html>

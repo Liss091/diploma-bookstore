@@ -23,6 +23,12 @@ public interface BookDao extends JpaRepository<Book, Integer>, BookDaoCustom {
     nativeQuery = true)
     List<Book> findByCriteria(@Param("criteria") String searchCriteria);
 
+    @Query(value = "SELECT b.* FROM books b " +
+            "ORDER BY b.rating DESC " +
+            "LIMIT :limit",
+            nativeQuery = true
+    )
+    List<Book> findTopRatedBooks(@Param("limit") Integer limit);
 
     @Query(value = "SELECT b.* FROM books b " +
             "WHERE title_vector @@ plainto_tsquery(:criteria);",

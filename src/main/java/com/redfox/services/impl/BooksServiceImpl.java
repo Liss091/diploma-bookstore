@@ -19,6 +19,11 @@ public class BooksServiceImpl implements BooksService {
     }
 
     @Override
+    public List<Book> topRatedBooks() {
+        return bookDao.findTopRatedBooks(9);
+    }
+
+    @Override
     public List<Book> fetchAllBooks() {
         return bookDao.findAll();
     }

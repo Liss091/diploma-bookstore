@@ -7,4 +7,6 @@ import java.util.List;
 public interface BooksService {
 
     List<Book> fetchAllBooks();
+
+    List<Book> topRatedBooks();
 }
