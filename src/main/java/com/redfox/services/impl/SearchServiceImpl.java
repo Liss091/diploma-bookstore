@@ -43,8 +43,8 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public List<Book> findByExtendedCriteria(String title, String authorNames, List<String> genreIds,
+    public List<Book> findByExtendedCriteria(String title, String authorNames, String isbn, List<String> genreIds,
                                              BigDecimal minPrice, BigDecimal maxPrice) {
-        return bookDao.findByExtendedSearchCriterias(title, authorNames, genreIds, minPrice, maxPrice);
+        return bookDao.findByExtendedSearchCriterias(title, authorNames, isbn, genreIds, minPrice, maxPrice);
     }
 }

@@ -53,6 +53,8 @@ public class Order {
     @Column(name = "email")
     private String email;
 
+    private String delivery;
+
     public Integer getId() {
         return id;
     }
@@ -123,5 +125,13 @@ public class Order {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(String delivery) {
+        this.delivery = delivery;
     }
 }

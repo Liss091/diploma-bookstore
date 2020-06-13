@@ -19,11 +19,11 @@
     <div class="content">
         <h:form id="form1">
             <h2>Find book to read here!</h2>
-            <div id="searchInput">
-                <p:panel class="not-visible" rendered="#{!dataGridView.extendedSearch}">
+            <div id="searchInputDiv">
+                <p:panel class="not-visible searchInputCriteriaPanel" rendered="#{!dataGridView.extendedSearch}">
                     <p:inputText id="searchCriteria" value="#{dataGridView.searchCriteria}" size="100"/>
                     <p:watermark for="searchCriteria" value="Search by Title, Author or Category" id="watermark" />
-                    <p:commandLink value="Extended Search" update="@form" action="#{dataGridView.isExtendedSearch(true)}"/>
+                    <p:commandLink value="Extended Search" update="@form" action="#{dataGridView.isExtendedSearch(true)}" />
                 </p:panel>
                 <p:panel rendered="#{dataGridView.extendedSearch}" class="not-visible">
                 <h:panelGrid columns="2" columnClasses="searchLabel, searchInput" class="not-visible" >
@@ -32,6 +32,9 @@
 
                     <h:outputLabel value="Authors:" style="font-weight: bold"/>
                     <p:inputText id="authorsCriteria" value="#{dataGridView.authorsCriteria}" size="50"/>
+
+                    <h:outputLabel value="ISBN:" style="font-weight: bold"/>
+                    <p:inputText id="isbnCriteria" value="#{dataGridView.isbnCriteria}" size="30"/>
 
                     <h:outputLabel value="Categories:" style="font-weight: bold;"/>
                     <p:selectManyCheckbox id="genresCheckBox" value="#{dataGridView.selectedGenresIds}" layout="grid" columns="4">
@@ -51,6 +54,7 @@
                     <p:commandLink value="Simple Search" update="@form" action="#{dataGridView.isExtendedSearch(false)}"/>
                 </p:panel>
                 <div style="text-align: center; margin-bottom: 20px">
+                    <p:commandLink value="Clear" update=":form1 :form2" action="#{dataGridView.clearForm}" style="margin-right: 30px"/>
                     <p:commandButton class="btn" value="Search" id="searchBtn" update=":form2:dataView"
                                  action="#{dataGridView.findBooksByCriteria}" style="align-self: center"/>
                 </div>
@@ -59,6 +63,14 @@
     <h:form id="form2">
         <p:growl id="growl" showDetail="true" sticky="true" />
         <div id="searchOutput">
+            <p:outputLabel for="@next" value="Sort By " />
+            <p:selectOneMenu id="sorting" value="#{dataGridView.sortMode}"  style="width:125px">
+                <f:selectItem itemLabel="" itemValue="" />
+                <f:selectItem itemLabel="Title" itemValue="title" />
+                <f:selectItem itemLabel="Ascending Price" itemValue="ascending price" />
+                <f:selectItem itemLabel="Descending Price" itemValue="descending price" />
+                <p:ajax event="change" listener="#{dataGridView.sortBooks}" update=":form2:dataView" process="@this" />
+            </p:selectOneMenu>
             <p:dataView id="dataView" var="book" value="#{dataGridView.books}"
                         rows="10" paginator="true"
                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface BookDaoCustom {
 
-    List<Book> findByExtendedSearchCriterias(String title, String authorNames, List<String> genreIds, BigDecimal minPrice, BigDecimal maxPrice);
+    List<Book> findByExtendedSearchCriterias(String title, String authorNames, String isbn, List<String> genreIds, BigDecimal minPrice, BigDecimal maxPrice);
 }

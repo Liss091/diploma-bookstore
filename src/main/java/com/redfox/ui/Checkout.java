@@ -12,6 +12,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Named
@@ -36,6 +37,18 @@ public class Checkout implements Serializable {
 
     private Set<Book> bookList;
 
+    private List<String> deliveryMethods;
+
+    private String selectedDeliveryMethod;
+
+    @PostConstruct
+    public void init() {
+        deliveryMethods = new ArrayList<>();
+        deliveryMethods.add("Nova Poshta");
+        deliveryMethods.add("Express Delivery");
+        deliveryMethods.add("DHL Delivery");
+    }
+
     @Inject
     private OrderService orderService;
 
@@ -47,6 +60,7 @@ public class Checkout implements Serializable {
         order.setPhoneNumber(phoneNumber);
         order.setEmail(email);
         order.setAmount(totalAmount);
+        order.setDelivery(selectedDeliveryMethod);
         order.setCreationDate(new Timestamp(System.currentTimeMillis()));
         order.setBooksList(new ArrayList<>(bookList));
 
@@ -135,4 +149,19 @@ public class Checkout implements Serializable {
         this.bookList = bookList;
     }
 
+    public List<String> getDeliveryMethods() {
+        return deliveryMethods;
+    }
+
+    public void setDeliveryMethods(List<String> deliveryMethods) {
+        this.deliveryMethods = deliveryMethods;
+    }
+
+    public String getSelectedDeliveryMethod() {
+        return selectedDeliveryMethod;
+    }
+
+    public void setSelectedDeliveryMethod(String selectedDeliveryMethod) {
+        this.selectedDeliveryMethod = selectedDeliveryMethod;
+    }
 }

@@ -18,8 +18,10 @@ public interface BookDao extends JpaRepository<Book, Integer>, BookDaoCustom {
      * @return список книг, которые соответствуют критерии
      */
     @Query(value = "SELECT b.* FROM books b " +
-            "JOIN full_search_vector fsv ON b.book_id = fsv.book_id " +
-            "WHERE fsv.full_tsvector @@ plainto_tsquery(:criteria)",
+            "JOIN full_search_vector fsv ON b.book_id = fsv.book_id, " +
+            "plainto_tsquery(:criteria) query " +
+            "WHERE fsv.full_tsvector @@ query " +
+            "ORDER BY ts_rank_cd(fsv.full_tsvector, query) desc",
     nativeQuery = true)
     List<Book> findByCriteria(@Param("criteria") String searchCriteria);
 

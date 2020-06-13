@@ -9,9 +9,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.math.BigDecimal;
-import java.sql.Array;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.List;
 
 @Repository
@@ -22,7 +19,7 @@ public class BookDaoImpl implements BookDaoCustom {
     EntityManager entityManager;
 
     @Override
-    public List<Book> findByExtendedSearchCriterias(String title, String authorNames, List<String> genreIds,
+    public List<Book> findByExtendedSearchCriterias(String title, String authorNames, String isbn, List<String> genreIds,
                                                     BigDecimal minPrice, BigDecimal maxPrice) {
         StringBuilder builder = new StringBuilder("SELECT DISTINCT b.* FROM books b " +
                 "LEFT JOIN book_authors ba ON b.book_id=ba.book_id " +
@@ -36,6 +33,9 @@ public class BookDaoImpl implements BookDaoCustom {
         }
         if (authorNames != null && !authorNames.isEmpty()) {
             builder.append("AND au.name_vector @@ plainto_tsquery(:authorNames) ");
+        }
+        if (isbn != null && !isbn.isEmpty()) {
+            builder.append("AND b.isbn ILIKE :isbn ");
         }
         if (!genreIds.isEmpty()) {
             builder.append("AND g.genre_id in (");
@@ -56,6 +56,9 @@ public class BookDaoImpl implements BookDaoCustom {
         }
         if (authorNames != null && !authorNames.isEmpty()) {
             query.setParameter("authorNames", authorNames);
+        }
+        if (isbn != null && !isbn.isEmpty()) {
+            query.setParameter("isbn", '%' + isbn + '%');
         }
         if (!genreIds.isEmpty()) {
             for (int i = 0; i < genreIds.size(); i++) {

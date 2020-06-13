@@ -10,6 +10,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Named
@@ -28,6 +30,8 @@ public class DataGridView implements Serializable {
 
     private String authorsCriteria;
 
+    private String isbnCriteria;
+
     private List<Genre> genres;
 
     private List<String> selectedGenresIds;
@@ -41,6 +45,8 @@ public class DataGridView implements Serializable {
     private BigDecimal minPrice;
 
     private BigDecimal maxPrice;
+
+    private String sortMode;
 
     @Inject
     private SearchService searchService;
@@ -67,10 +73,11 @@ public class DataGridView implements Serializable {
         if (extendedSearch) {
             if ((titleCriteria != null && !titleCriteria.isEmpty())
                     || (authorsCriteria != null && !authorsCriteria.isEmpty())
+                    || (isbnCriteria != null && !isbnCriteria.isEmpty())
                     || (selectedGenresIds != null && !selectedGenresIds.isEmpty())
                     || !minPrice.equals(existingMinPrice)
                     || !maxPrice.equals(existingMaxPrice)) {
-                books = searchService.findByExtendedCriteria(titleCriteria, authorsCriteria, selectedGenresIds, minPrice, maxPrice);
+                books = searchService.findByExtendedCriteria(titleCriteria, authorsCriteria, isbnCriteria, selectedGenresIds, minPrice, maxPrice);
             } else {
                 books = allBooks;
             }
@@ -79,6 +86,31 @@ public class DataGridView implements Serializable {
                 books = searchService.findByCriteria(searchCriteria);
             } else {
                 books = allBooks;
+            }
+        }
+
+    }
+
+    public void clearForm() {
+        books = allBooks;
+        searchCriteria = "";
+        titleCriteria = "";
+        authorsCriteria = "";
+        isbnCriteria = "";
+        selectedGenresIds = new ArrayList<>();
+        minPrice = existingMinPrice;
+        maxPrice = existingMaxPrice;
+    }
+
+    public void sortBooks() {
+        if (sortMode != null && !sortMode.isEmpty()) {
+            switch (sortMode) {
+                case "title" : books.sort(Comparator.comparing(Book::getTitle));
+                    break;
+                case "ascending price" : books.sort(Comparator.comparing(Book::getPrice));
+                    break;
+                case "descending price" : books.sort(Comparator.comparing(Book::getPrice).reversed());
+                    break;
             }
         }
     }
@@ -143,6 +175,14 @@ public class DataGridView implements Serializable {
         this.authorsCriteria = authorsCriteria;
     }
 
+    public String getIsbnCriteria() {
+        return isbnCriteria;
+    }
+
+    public void setIsbnCriteria(String isbnCriteria) {
+        this.isbnCriteria = isbnCriteria;
+    }
+
     public List<Genre> getGenres() {
         return genres;
     }
@@ -189,5 +229,13 @@ public class DataGridView implements Serializable {
 
     public void setExistingMaxPrice(BigDecimal existingMaxPrice) {
         this.existingMaxPrice = existingMaxPrice;
+    }
+
+    public String getSortMode() {
+        return sortMode;
+    }
+
+    public void setSortMode(String sortMode) {
+        this.sortMode = sortMode;
     }
 }

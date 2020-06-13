@@ -148,19 +148,17 @@ button.ui-button.ui-state-default.not-important {
     width: 15%;
 }
 
-.searchInput {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.not-visible.searchInputCriteriaPanel {
+    text-align: center;
 }
+
 
 .ui-linkbutton.ui-button.ui-state-defaul a {
     font-family: Century Gothic, sans-serif;
     font-size: 18px;
 }
 
-
-/*.content.infoForm {*/
-    /*width: 80%;*/
-    /*margin-top: 15px;*/
-    /*margin-left: 25px;*/
-/*}*/
+.required:after {
+    content:" *";
+    color: red;
+}

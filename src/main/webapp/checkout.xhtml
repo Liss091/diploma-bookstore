@@ -17,32 +17,37 @@
     <ui:include src="page-elements/header.xhtml"/>
     <ui:include src="page-elements/menu.xhtml"/>
     <div class="wrapper">
-    <div class="content" style="text-align: center;">
+    <div class="content" >
         <h2>Provide shipping info</h2>
         <h:form id="form1">
             <h:panelGrid columns="2" width="60%">
-                <p:outputLabel value="First Name"/>
-                <p:inputText value="#{checkout.firstName}" required="true" size="50"/>
+                <p:outputLabel class="required" value="First Name" />
+                <p:inputText id="fname" value="#{checkout.firstName}" required="true" size="50" requiredMessage="Please enter your first name"/>
 
-                <p:outputLabel value="Last Name"/>
-                <p:inputText value="#{checkout.lastName}" required="true" size="50"/>
+                <p:outputLabel class="required" value="Last Name"/>
+                <p:inputText id="lname" value="#{checkout.lastName}" required="true" size="50" requiredMessage="Please enter your last name"/>
 
-                <p:outputLabel value="Address Line 1"/>
-                <p:inputText value="#{checkout.addressLine1}" required="true" size="40"/>
+                <p:outputLabel class="required" value="Address Line 1"/>
+                <p:inputText id="line1" value="#{checkout.addressLine1}" required="true" size="40" requiredMessage="Please enter your address"/>
 
                 <p:outputLabel value="Address Line 2"/>
-                <p:inputText value="#{checkout.addressLine2}" size="40"/>
+                <p:inputText id="line2" value="#{checkout.addressLine2}" size="40"/>
 
                 <p:outputLabel value="Address Line 3"/>
-                <p:inputText value="#{checkout.addressLine3}" size="40"/>
+                <p:inputText id="line3" value="#{checkout.addressLine3}" size="40"/>
 
-                <p:outputLabel value="Phone number"/>
-                <p:inputMask value="#{checkout.phoneNumber}" required="true" mask="(999) 999-9999"/>
+                <p:outputLabel class="required" value="Phone number"/>
+                <p:inputMask id="phone" value="#{checkout.phoneNumber}" required="true" mask="(999) 999-9999" requiredMessage="Please enter phone number"/>
 
-                <p:outputLabel value="Email address"/>
-                <p:inputText value="#{checkout.email}" required="true" size="40" >
+                <p:outputLabel class="required" value="Email address" requiredMessage="Please enter your email"/>
+                <p:inputText id="email" value="#{checkout.email}" required="true" size="40" >
                     <p:keyFilter regEx="/[a-z0-9_\.\-@]/i"/>
                 </p:inputText>
+
+                <p:outputLabel value="Delivery:"/>
+                <p:selectOneRadio id="deliveryMethod" value="#{checkout.selectedDeliveryMethod}" required="true" layout="grid" columns="1">
+                    <f:selectItems value="#{checkout.deliveryMethods}" />
+                </p:selectOneRadio>
 
                 <p:outputLabel value="Ordered Books"/>
                 <p:repeat value="#{checkout.bookList}" var="book">
@@ -51,7 +56,7 @@
                 </p:repeat>
 
                 <p:outputLabel value="Total Amount" style="font-weight: bold"/>
-                <h:outputText value="#{checkout.totalAmount}"/>
+                <h:outputText value="#{checkout.totalAmount}" style="font-weight: bold"/>
             </h:panelGrid>
 
             <p:commandButton value="Confirm" class="btn" id="confirmBtn" action="#{checkout.confirmOrder}" ajax="false"/>
