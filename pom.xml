@@ -19,7 +19,7 @@
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <jetty-maven-plugin.version>9.4.8.v20171121</jetty-maven-plugin.version>
         <tomcat-maven-plugin.version>2.2</tomcat-maven-plugin.version>
-        <spring.framework>5.2.6.RELEASE</spring.framework>
+        <spring.framework>5.3.18</spring.framework>
     </properties>
 
     <dependencies>
